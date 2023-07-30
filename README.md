@@ -1,3 +1,4 @@
+# Take Home Challenge
 ## Plan
 - Initial setup of React on the frontend and Express on the backend with Postgresql
 ### Frontend
