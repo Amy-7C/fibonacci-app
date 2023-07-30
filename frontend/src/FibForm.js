@@ -13,7 +13,7 @@ export function FibForm() {
     <div className="App">
       <header className="App-header">
         <h1>Fibonacci Number Generator</h1>
-        <p>Input a number 'n' to display the first 'n' fibonacci numbers (only up to 91).</p>
+        <p>Pick a number from 1-91 to display the first 'n' fibonacci numbers.</p>
         <form onSubmit={handleSubmit}>
           <input type="text" value={input} onChange={(e) => setInput(e.target.value)}></input>
           <button type="submit">Get Results</button>

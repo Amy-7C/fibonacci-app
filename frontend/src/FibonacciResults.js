@@ -4,7 +4,7 @@ export function FibonacciResults() {
   const { num } = useParams();
   const [results, setResults] = useState("");
   const fetchData = async () => {
-    if(num > 91) return setResults("Can display only up to 91 numbers. Please go back.")
+    if(num > 91 || num < 1) return setResults("Can display only 1-91 numbers. Please go back.")
     await fetch(`http://localhost:3001/fibnumbers/${num}`, {
       headers: {
         'Content-Type': 'application/json'
