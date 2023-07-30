@@ -1,7 +1,7 @@
 # Take Home Challenge
 ## Plan
 - Initial setup of React on the frontend and Express on the backend with Postgresql
-- Created a table in Postgresql with columns 'index' and 'value'. 'index' has a unique constraint so there aren't multiple indices. Index 0 maps to the number 1, index 1 maps to the number 2, and so on
+- Created a table in Postgresql with columns 'index' and 'value'. 'index' has a unique constraint so there aren't multiple of the same indices. Index 0 maps to the number 1, index 1 maps to the number 2, and so on
 - Populated the first two fibonacci numbers
 ### Frontend
 - Create a simple form
