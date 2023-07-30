@@ -8,6 +8,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<FibForm />}/>
+        <Route path="/results/:num" element={<FibonacciResults />} />
         <Route path="/results" element={<FibonacciResults />} />
       </Routes>
     </>
