@@ -16,7 +16,7 @@ const getFibNumbers = (req, res) => {
       throw error
     }
     const fibList = results.rows;
-    const fibValueList = fibList.map((index) => index.value);
+    const fibValueList = fibList.map((index) => parseInt(index.value));
     if(fibList.length !== num) {
       for(let i = fibList.length; i < num; i++) {
         const value = fibValueList[i-1] + fibValueList[i-2];
