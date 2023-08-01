@@ -3,7 +3,7 @@ const pg = require("pg").Pool;
 const pool = new pg({
   user: 'postgres',
   host: 'localhost',
-  database: 'fibonacci',
+  database: 'postgres',
   password: 'password',
   port: 5432
 });
