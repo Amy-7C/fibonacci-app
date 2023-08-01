@@ -8,6 +8,27 @@ const pool = new pg({
   port: 5432
 });
 
+const createTable = async () => {
+  try{
+    const createTableQuery = `CREATE TABLE IF NOT EXISTS fibonacci (
+      id SERIAL NOT NULL PRIMARY KEY,
+      index INTEGER NOT NULL UNIQUE,
+      value BIGINT NOT NULL
+    )`
+    const insertInitialValuesQuery = `INSERT INTO fibonacci (index, value) VALUES (0, 0), (1, 1)`;
+    
+    const client = await pool.connect();
+    await client.query(createTableQuery);
+    await client.query(insertInitialValuesQuery);
+    client.release();
+    console.log("table created")
+  } catch(err) {
+    console.log("error creating table", err)
+  } finally {
+    pool.end()
+  }
+}
+
 const getFibNumbers = (req, res) => {
   const num = parseInt(req.params.num);
   const query = 'SELECT value FROM fibonacci WHERE index < $1'
@@ -40,5 +61,6 @@ const insertFibNum = (index, value) => {
 }
 
 module.exports = {
-  getFibNumbers
+  getFibNumbers, 
+  createTable
 }
