@@ -8,6 +8,7 @@ const pool = new pg({
   port: 5432
 });
 
+//utilized help of ChatGPT to write up the createTable function along with the 'create' script in the package.json file
 const createTable = async () => {
   try{
     const createTableQuery = `CREATE TABLE IF NOT EXISTS fibonacci (
