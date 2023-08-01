@@ -1,4 +1,7 @@
 # Take Home Challenge
+## Running
+- First run 'npm run create' in the backend folder to create and populate a postgresql table with initial values.
+- After you can run 'npm run start' in the frontend folder, and 'npm run dev' in the backend folder to startup local servers.
 ## Plan
 - Initial setup of React on the frontend and Express on the backend with Postgresql
 - Created a table in Postgresql with columns 'index' and 'value'. 'index' has a unique constraint so there aren't multiple of the same indices. Index 0 maps to the number 1, index 1 maps to the number 2, and so on
